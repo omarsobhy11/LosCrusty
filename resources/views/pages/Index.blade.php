@@ -1,15 +1,9 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{config('app.name', 'PizaaApp')}}</title>
-
-    </head>
-    <body>
-        <h1>Welcome to Our App</h1>
-        <p>This is the pizza app from our humble team</p>
-    </body>
-</html>
+    @extends('layout.app')
+     @section('content')
+     <div class="jumbotron text-center">
+        <h1>{{$title}}</h1>
+        <p>the cheesiest pizza you will ever tast</p>
+        <p><a class="btn btn-primary btn-lg" href="/login" role="button">login</a><a class="btn btn-success btn-lg" href="/register" role="button">register</a>
+     </div>
+     @endsection
