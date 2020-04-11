@@ -8,15 +8,19 @@ class PagesController extends Controller
 {
     public function index(){
         $title ='welcome to Krusty Krab';
-       return view('pages.index')->with('title',$title);
+       return view('pages.index')->with('title', $title);
     }
     public function about(){
-        $title ='welcome to Laravel';
-        return view('pages.about')->with('title',$title);
+        $title ='welcome to about';
+        return view('pages.about')->with('title', $title);
     }
 
     public function services(){
-        return view('pages.services');
+        $data = array(
+            'title' => 'Services',  
+             'services' => ['Food ordering', 'Food delivery']
+         );
+         return view('pages.services')->with($data);
     }
 
 }
