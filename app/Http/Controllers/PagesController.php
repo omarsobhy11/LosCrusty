@@ -23,4 +23,21 @@ class PagesController extends Controller
          return view('pages.services')->with($data);
     }
 
+    public function create(){
+        return view('pages.createOrder');
+    }
+
+    public function store(request $req){
+        //$todo = new Post();
+        //$todo->** = $req->mail;
+        //$todo->** = $req->num;
+        //$todo->** = $req->addr_1;
+        //$todo->** = $req->addr_2;
+        //$todo->** = $req->ord;
+
+        $todo->save();
+
+        return redirect('/pizza/public/createOrder');
+    }
+
 }
