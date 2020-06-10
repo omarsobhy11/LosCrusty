@@ -16,6 +16,9 @@ Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::resource('orders', 'OrderController');
 
+Route::get('/menu', 'PagesController@menu_view');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

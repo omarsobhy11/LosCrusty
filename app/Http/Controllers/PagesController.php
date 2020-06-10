@@ -39,5 +39,8 @@ class PagesController extends Controller
 
         return redirect('/pizza/public/createOrder');
     }
+    public function menu_view(){
+        return view('pages.menu');
+    }
 
 }
